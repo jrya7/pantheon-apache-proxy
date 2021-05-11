@@ -22,6 +22,8 @@ make sure the following apache modules are enabled (list may be incomplete, send
 - modify the proxy location inside of the "Location" directive block
   - this will be the remote URL location
   - you will need to enter the full FQDN and http protocol
+- add the conf file to your apache conf.d directory
+  - default location is `/etc/httpd/conf.d`
 - save your changes and restart apache
   - `systemctl restart httpd`
 - visit the URL path in your browser to verify
