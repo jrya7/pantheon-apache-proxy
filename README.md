@@ -31,7 +31,7 @@ make sure the following apache modules are enabled (list may be incomplete, send
 ## examples
 the following examples are for using www.cgd.ucar.edu as the local apache server
 
-`<Location "/research/cdg">
+`<Location "/research/cdg"><br/>
 	ProxyPass https://climatedataguide.ucar.edu/
 	ProxyPassReverse https://climatedataguide.ucar.edu/
 </Location>`
