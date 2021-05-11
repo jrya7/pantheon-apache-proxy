@@ -64,3 +64,15 @@ over to:
 https://climatedataguide.ucar.edu
 
 meaning that the user will see https://www.cgd.ucar.edu in their browser but the page shown is actually https://climatedataguide.ucar.edu
+
+
+## issues
+the following are currently known issues with using this method
+
+###### specific path proxy example
+	<Location "/research/cdg">
+		ProxyPass https://climatedataguide.ucar.edu/climate-data
+		ProxyPassReverse https://climatedataguide.ucar.edu/climate-data
+	</Location>
+
+this will proxy https://www.cgd.ucar.edu/research/cdg/* to the ProxyPass location meaing that https://www.cgd.ucar.edu/research/cdg/test1/test2 will be proxied over, essentially if anything is after /research/cdg it will be proxied
