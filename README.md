@@ -18,6 +18,7 @@ make sure the following apache modules are enabled (list may be incomplete, send
 ## usage
 - modify the pantheon-proxy.conf file for the paths you want to proxy by editing the path in the "Location" directive start tag
   - this will be the URL path on the local server
+  - make sure to include the leading /
   - you do not need to enter the web root path
 - modify the proxy location inside of the "Location" directive block
   - this will be the remote URL location
@@ -34,14 +35,28 @@ make sure the following apache modules are enabled (list may be incomplete, send
 the following examples are for using www.cgd.ucar.edu as the local apache server
 
 	<Location "/research/cdg">
-		ProxyPass https://climatedataguide.ucar.edu/
-		ProxyPassReverse https://climatedataguide.ucar.edu/
+		ProxyPass https://climatedataguide.ucar.edu/climate-data
+		ProxyPassReverse https://climatedataguide.ucar.edu/climate-data
 	</Location>
 
 this directive will proxy all requests to:
 https://www.cgd.ucar.edu/research/cdg
 
 over to:
+https://climatedataguide.ucar.edu/climate-data
+
+meaning that the user will see https://www.cgd.ucar.edu/research/cdg in their browser but the page shown is actually https://climatedataguide.ucar.edu/climate-data
+
+
+	<Location "/">
+		ProxyPass https://climatedataguide.ucar.edu/
+		ProxyPassReverse https://climatedataguide.ucar.edu/
+	</Location>
+
+this directive will proxy all requests to:
+https://www.cgd.ucar.edu
+
+over to:
 https://climatedataguide.ucar.edu
 
-meaning that the user will see https://www.cgd.ucar.edu/research/cdg in their browser but the page shown is actually https://climatedataguide.ucar.edu
+meaning that the user will see https://www.cgd.ucar.edu in their browser but the page shown is actually https://climatedataguide.ucar.edu
