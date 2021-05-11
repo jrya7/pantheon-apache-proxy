@@ -48,7 +48,7 @@ https://climatedataguide.ucar.edu/climate-data
 
 meaning that the user will see https://www.cgd.ucar.edu/research/cdg in their browser but the page shown is actually https://climatedataguide.ucar.edu/climate-data
 
-**note** the location on the local server (https://www.cgd.ucar.edu/research/cdg for this use case) does not have to exist for the proxy to work, if it does then it will not be shown as the proxy location will be shown instead
+**note:** the location on the local server (https://www.cgd.ucar.edu/research/cdg for this use case) does not have to exist for the proxy to work, if it does then it will not be shown as the proxy location will be shown instead
 
 
 ###### homepage proxy example
