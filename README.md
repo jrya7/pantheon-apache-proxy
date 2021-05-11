@@ -34,6 +34,7 @@ make sure the following apache modules are enabled (list may be incomplete, send
 ## examples
 the following examples are for using www.cgd.ucar.edu as the local apache server
 
+###### specific path proxy example
 	<Location "/research/cdg">
 		ProxyPass https://climatedataguide.ucar.edu/climate-data
 		ProxyPassReverse https://climatedataguide.ucar.edu/climate-data
@@ -47,7 +48,10 @@ https://climatedataguide.ucar.edu/climate-data
 
 meaning that the user will see https://www.cgd.ucar.edu/research/cdg in their browser but the page shown is actually https://climatedataguide.ucar.edu/climate-data
 
+**note** the location on the local server (https://www.cgd.ucar.edu/research/cdg for this use case) does not have to exist for the proxy to work, if it does then it will not be shown as the proxy location will be shown instead
 
+
+###### homepage proxy example
 	<Location "/">
 		ProxyPass https://climatedataguide.ucar.edu/
 		ProxyPassReverse https://climatedataguide.ucar.edu/
