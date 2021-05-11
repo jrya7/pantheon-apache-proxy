@@ -5,7 +5,7 @@ Proxy setup to serve Pantheon Drupal pages from an Apache web server using the s
 ## overview
 - proxy an apache request to a drupal site on pantheon
 - shares the same domain with 2 different servers without a subdomain 
-- takes an internal path and proxies to a pantheon site
+- takes a local path and proxies to a pantheon site
 - if a match is not found then will resolve to apache location
 - the local path does not have to be valid to proxy requests
 
@@ -75,7 +75,7 @@ the following are currently known issues with using this method
 		ProxyPassReverse https://climatedataguide.ucar.edu/climate-data
 	</Location>
 
-this will proxy `https://www.cgd.ucar.edu/research/cdg/*` to the ProxyPass location meaing that https://www.cgd.ucar.edu/research/cdg/test1/test2 will be proxied over, essentially if anything is after /research/cdg it will be proxied
+this will proxy `https://www.cgd.ucar.edu/research/cdg/*` to the ProxyPass location meaing that https://www.cgd.ucar.edu/research/cdg/test1/test2 will be proxied over, essentially if anything is after /research/cdg it will be proxied and not show the apache location
 
 
 ## references
