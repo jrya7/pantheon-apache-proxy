@@ -75,4 +75,8 @@ the following are currently known issues with using this method
 		ProxyPassReverse https://climatedataguide.ucar.edu/climate-data
 	</Location>
 
-this will proxy https://www.cgd.ucar.edu/research/cdg/* to the ProxyPass location meaing that https://www.cgd.ucar.edu/research/cdg/test1/test2 will be proxied over, essentially if anything is after /research/cdg it will be proxied
+this will proxy `https://www.cgd.ucar.edu/research/cdg/*` to the ProxyPass location meaing that https://www.cgd.ucar.edu/research/cdg/test1/test2 will be proxied over, essentially if anything is after /research/cdg it will be proxied
+
+
+## references
+- https://httpd.apache.org/docs/current/mod/mod_proxy.html
