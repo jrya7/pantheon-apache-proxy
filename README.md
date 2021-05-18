@@ -77,6 +77,9 @@ the following are currently known issues with using this method
 
 this will proxy `https://www.cgd.ucar.edu/research/cdg/*` to the ProxyPass location meaing that https://www.cgd.ucar.edu/research/cdg/test1/test2 will be proxied over, essentially if anything is after /research/cdg it will be proxied and not show the apache location
 
+###### new drupal pages
+if new drupal pages are added then they will also need to be added to the conf file so the user will see the correct pages
+
 
 ## references
 - https://httpd.apache.org/docs/current/mod/mod_proxy.html
